@@ -41,9 +41,12 @@ def verificar(c):
     return False
 D="sim"
 while D=="sim":
-    N=int(input("Digite o número de jogadores: "))
+    print("\n----------BINGO ON-LINE----------")
+    print("\nREGRAS\nCada cartela possui 5 linhas e 5 colunas\nVence quem completar uma linha ou coluna primeiro")
+    N=int(input("\nDigite o número de jogadores: "))
     nomes=[]
     cartelas=[]
+    print()
     for i in range(1,N+1):
         nome=input(f"Nome do jogador {i}: ")
         nomes.append(nome)
@@ -58,7 +61,7 @@ while D=="sim":
             mostrar(cartelas[i])
             if verificar(cartelas[i]):
                 print("BINGO!\nVencedor:", nomes[i])
-                D="não"
+                D=input("\nDeseja jogar novamente? ").strip().lower()
                 G=True
                 break
         if G:

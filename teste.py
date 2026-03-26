@@ -57,7 +57,7 @@ while D=="sim":
             marcar(cartelas[i], n)
             mostrar(cartelas[i])
             if verificar(cartelas[i]):
-                print("BINGO! Vencedor:", nomes[i])
+                print("BINGO!\nVencedor:", nomes[i])
                 D="não"
                 G=True
                 break
